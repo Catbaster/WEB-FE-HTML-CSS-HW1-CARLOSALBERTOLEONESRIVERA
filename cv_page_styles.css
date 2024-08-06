@@ -1,6 +1,13 @@
 header {
     border: 1px solid #FF0000;
     background-color: #000000;
+}
+
+.header-h1{
+    color: #ffffff;
+}
+
+.header-h2{
     color: #ffffff;
 }
 
@@ -18,3 +25,4 @@ img {
     max-width: 100px;
     border-radius: 50%;
 }
+
