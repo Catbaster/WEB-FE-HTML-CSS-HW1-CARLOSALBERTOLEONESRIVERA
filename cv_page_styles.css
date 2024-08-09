@@ -1,5 +1,12 @@
-/* El estilo del encabezado donde principalmente se carga la imagen de fondo*/
+/*-----HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER-----*/
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/* El estilo del encabezado donde principalmente se carga la imagen de fondo y se hacen configuraciones estéticas de los elementos que
+componen el encabezado*/
 header {
+    position: relative;
+
+    /*Declara el tipo de fuente del encabezado*/
+    font-family: Arial, Helvetica, sans-serif;
 
     /*Carga la imagen del fondo que está en el folder img*/
     background-image: url("img/background_cover.jpg");
@@ -7,62 +14,104 @@ header {
     /*Define el tamaño de la imagen de fondo como tipo portada*/
     background-size: cover;
 
+    /*Define que el color del texto que se encuentra en el cabezado como blanco*/
+    color: #ffffff;
+
     /*Centra la portada en la página para los casos en los que se quiera tener márgenes a los lados*/
     background-position: center;
 
-    position: relative;
-}
-
-/*header-text se refiere a que el texto que se ubica en el encabezado tiene propiedades distintas del resto del texto, esto se hace debido
-a que en el encabezado se llaman a las etiquetas h1, h2 y demás, que no pueden compartir las mismas características que el resto del texto
-que también sea etiquetado por h1, h2, y demás. header-title y header-quote comparten las mismas propiedades que header-text a excepción de su
-padding el cual es diseño para que quede espacio entre el título del encabezado y la cita del encabezado con respecto al encabezado*/
-.header-text, .header-title, .header-quote {
-    color: #ffffff;
-    margin-left: 1%;
-}
-
-/*Una de las etiquetas h1 es llamada con esta clase específica para que deje espacio arriba y abajo con tal de separar y subrayar el nombre*/
-.header-title {
+    /*Separa el texto del nombre a razón del 1% del borde superior del encabezado y también separa el texto de la frase
+    inferior a razón del 1% del borde inferior del encabezado*/
     padding-top: 1%;
     padding-bottom: 1%;
-}
 
-/*Una de las etiquetas h3 que se llama para la cita, deja espacio al final para que le dé más estética a la combinación del texto y el fondo*/
-.header-quote {
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
-
-/*La frase que se encuentra en el encabezado puede ser distinta al resto de frases que se vayan a incluir por lo que se especifica una clase
-para la frase principal del encabezado*/
-.blockquote-header {
-    font-weight: normal;
-    font-style: italic;
-    border-left: 3px solid #ffffff;
-    padding-left: 0.5%;
-}
-
-cite {
-    font-weight: normal;
-}
-
-footer {
-    text-align: center;
+    /*Separa el texto del nombre, información y frase a razón del 1% del borde izquierdo del encabezado*/
+    padding-left: 1%;
 }
 
 /*Se especifica la clase imagen de perfil ya que es el tipo de imagen al que se le buscará un contorno circular*/
 .profile-img {
     position: absolute;
+
+    /*Define el tamaño (anchura por altura) en píxeles de la imagen de perfil*/
     width: 250px;
     height: 250px;
+
+    /*Recorta el borde de la imagen de perfil con el que se obtiene un contorno circular*/
     border-radius: 50%;
+
+    /*Ubica la imagen de perfil en el encabezado, separándola del borde superior y del borde derecho por 50 píxeles*/
     top: 50px;
     right: 50px;
+}
+
+/*Una de las etiquetas h1 es llamada con esta clase específica para que deje espacio arriba y abajo con tal de separar y subrayar el nombre*/
+.header-title {
+    /*Separa el nombre de la información general a razón del 1%*/
+    padding-bottom: 1%;
+}
+
+/*Una de las etiquetas h3 que se llama para la cita, deja espacio al final para que le dé más estética a la combinación del texto y el fondo*/
+.header-quote {
+    /*Separa la frase de la información general a razón del 1%*/
+    padding-top: 1%;
+}
+
+/*La frase que se encuentra en el encabezado puede ser distinta al resto de frases que se vayan a incluir por lo que se especifica una clase
+para la frase principal del encabezado*/
+.blockquote-header {
+    /*Define el peso de la fuente y su estilo*/
+    font-weight: normal;
+    font-style: italic;
+
+    /*Genera una línea sólida de 3 píxeles de anchura al lado izquierdo de la frase que complementa la frase estéticamente*/
+    border-left: 3px solid #ffffff;
+
+    /*Separa el texto de la frase de la línea a razón del 0.5%*/
+    padding-left: 0.5%;
+}
+
+/*-----BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY-----*/
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/* El estilo del cuerpo donde principalmente se encuentra el contenido principal y se hacen configuraciones estéticas de los elementos que
+componen el cuerpo*/
+body {
+    /*Define la fuente del texto del cuerpo*/
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+
+    /*Define el color de fondo del cuerpo de la página, agradable a la vista*/
+    background-color: #f0f0f0;
+
+    /* margin: 20px; */
+}
+
+/*Elimina el tooltip indicativo (flechita) del estado de la sección y define el tipo del cursor como la manito al tener el cursor
+posicionado sobre el elemento summary*/
+details summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+section {
+    /*Especifica el color de cada sección que contrastará con el color de fondo*/
+    background-color: #f9f9f9;
+
+    /*Traza un contorno de un píxel alrededor de cada sección*/
+    border: 1px solid #ddd;
+
+    /*Define los márgenes de cada sección que la separarán externamente de los demás elementos del cuerpo*/
+    margin: 20px;
+
+    /*Separa el contenido de cada sección de cada borde de la sección*/
+    padding: 20px;
+  }
+
+/*-----FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER-----*/
+/*---------------------------------------------------------------------------------------------------------------------------------------*/
+/* El estilo del pie de página donde principalmente se encuentran los enlaces a redes sociales y se hacen configuraciones estéticas de los
+elementos que componen el pie de página*/
+footer {
+    /*Centra el texto del pie de página*/
+    text-align: center;
 }
 
